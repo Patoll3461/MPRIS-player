@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "mpris-player",
+	"version": "${version}",
+	"name": "MPRIS Player",
+	"description": "Add some MPRIS related commands",
+	"authors": [
+		"Patoll3461"
+	],
+	"contact": {
+		"homepage": "https://mc-tetragon.de/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/mpris-player/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.mctetragon.mprisplayer.MPRISPlayer"
+		],
+		"fabric-datagen": [
+			"com.mctetragon.mprisplayer.MPRISPlayerDataGenerator"
+		],
+        "client": [
+            "com-mctetragon.mprisplayer.MPRISPlayerClient"
+        ]
+	},
+	"mixins": [
+		"mpris-player.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
